@@ -21,7 +21,8 @@ jobs:
           terraform_version: 1.7.5  # lub inna wersja której używasz
 
       - name: Terraform Init
-        run: terraform init
+        run: terraform init -migrate-state
+
 
       - name: Terraform Plan
         run: terraform plan
